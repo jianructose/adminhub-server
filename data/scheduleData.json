@@ -1,0 +1,202 @@
+[
+  {
+    "Id": 1,
+    "Subject": "Team Building Workshop",
+    "Location": "Virtual",
+    "StartTime": "2024-03-20T09:00:00.000Z",
+    "EndTime": "2024-03-20T11:00:00.000Z",
+    "CategoryColor": "#007bff"
+  },
+  {
+    "Id": 2,
+    "Subject": "Monthly Performance Review",
+    "Location": "OpenAI Headquarters, San Francisco",
+    "StartTime": "2024-03-25T10:00:00.000Z",
+    "EndTime": "2024-03-25T12:00:00.000Z",
+    "CategoryColor": "#28a745"
+  },
+  {
+    "Id": 3,
+    "Subject": "Research Symposium",
+    "Location": "Virtual",
+    "StartTime": "2024-04-05T08:00:00.000Z",
+    "EndTime": "2024-04-05T18:00:00.000Z",
+    "CategoryColor": "#dc3545"
+  },
+  {
+    "Id": 4,
+    "Subject": "AI Ethics Panel Discussion",
+    "Location": "OpenAI Headquarters, San Francisco",
+    "StartTime": "2024-04-10T14:00:00.000Z",
+    "EndTime": "2024-04-10T16:00:00.000Z",
+    "CategoryColor": "#6610f2"
+  },
+  {
+    "Id": 5,
+    "Subject": "Product Strategy Meeting",
+    "Location": "Virtual",
+    "StartTime": "2024-04-15T09:00:00.000Z",
+    "EndTime": "2024-04-15T11:00:00.000Z",
+    "CategoryColor": "#ffc107"
+  },
+  {
+    "Id": 6,
+    "Subject": "AI Summit",
+    "Location": "Dubai, UAE",
+    "StartTime": "2024-04-20T08:00:00.000Z",
+    "EndTime": "2024-04-20T18:00:00.000Z",
+    "CategoryColor": "#20c997"
+  },
+  {
+    "Id": 7,
+    "Subject": "Leadership Retreat",
+    "Location": "Maui, Hawaii",
+    "StartTime": "2024-05-05T10:00:00.000Z",
+    "EndTime": "2024-05-06T18:00:00.000Z",
+    "CategoryColor": "#6f42c1"
+  },
+  {
+    "Id": 8,
+    "Subject": "Annual General Meeting",
+    "Location": "Virtual",
+    "StartTime": "2024-05-10T14:00:00.000Z",
+    "EndTime": "2024-05-10T16:00:00.000Z",
+    "CategoryColor": "#fd7e14"
+  },
+  {
+    "Id": 9,
+    "Subject": "Technical Workshop",
+    "Location": "OpenAI Headquarters, San Francisco",
+    "StartTime": "2024-05-15T09:00:00.000Z",
+    "EndTime": "2024-05-15T12:00:00.000Z",
+    "CategoryColor": "#17a2b8"
+  },
+  {
+    "Id": 10,
+    "Subject": "Project Review Meeting",
+    "Location": "Virtual",
+    "StartTime": "2024-05-20T10:00:00.000Z",
+    "EndTime": "2024-05-20T12:00:00.000Z",
+    "CategoryColor": "#007bff"
+  },
+  {
+    "Id": 11,
+    "Subject": "Investor Relations Conference",
+    "Location": "New York, NY",
+    "StartTime": "2024-06-05T08:00:00.000Z",
+    "EndTime": "2024-06-05T18:00:00.000Z",
+    "CategoryColor": "#28a745"
+  },
+  {
+    "Id": 12,
+    "Subject": "Quarterly Financial Review",
+    "Location": "Virtual",
+    "StartTime": "2024-06-10T14:00:00.000Z",
+    "EndTime": "2024-06-10T16:00:00.000Z",
+    "CategoryColor": "#dc3545"
+  },
+  {
+    "Id": 13,
+    "Subject": "Product Roadmap Presentation",
+    "Location": "OpenAI Headquarters, San Francisco",
+    "StartTime": "2024-06-15T09:00:00.000Z",
+    "EndTime": "2024-06-15T11:00:00.000Z",
+    "CategoryColor": "#6610f2"
+  },
+  {
+    "Id": 14,
+    "Subject": "AI Ethics Workshop",
+    "Location": "Virtual",
+    "StartTime": "2024-06-20T08:00:00.000Z",
+    "EndTime": "2024-06-20T18:00:00.000Z",
+    "CategoryColor": "#ffc107"
+  },
+  {
+    "Id": 15,
+    "Subject": "Leadership Training Seminar",
+    "Location": "Los Angeles, CA",
+    "StartTime": "2024-07-05T10:00:00.000Z",
+    "EndTime": "2024-07-05T12:00:00.000Z",
+    "CategoryColor": "#20c997"
+  },
+  {
+    "Id": 16,
+    "Subject": "Team Building Retreat",
+    "Location": "Lake Tahoe, CA",
+    "StartTime": "2024-07-10T14:00:00.000Z",
+    "EndTime": "2024-07-12T16:00:00.000Z",
+    "CategoryColor": "#6f42c1"
+  },
+  {
+    "Id": 17,
+    "Subject": "Strategic Planning Session",
+    "Location": "Virtual",
+    "StartTime": "2024-07-15T09:00:00.000Z",
+    "EndTime": "2024-07-15T11:00:00.000Z",
+    "CategoryColor": "#fd7e14"
+  },
+  {
+    "Id": 18,
+    "Subject": "Industry Conference",
+    "Location": "Tokyo, Japan",
+    "StartTime": "2024-07-20T08:00:00.000Z",
+    "EndTime": "2024-07-20T18:00:00.000Z",
+    "CategoryColor": "#17a2b8"
+  },
+  {
+    "Id": 19,
+    "Subject": "Research & Development Meeting",
+    "Location": "Virtual",
+    "StartTime": "2024-08-05T10:00:00.000Z",
+    "EndTime": "2024-08-05T12:00:00.000Z",
+    "CategoryColor": "#007bff"
+  },
+  {
+    "Id": 20,
+    "Subject": "Product Launch Event",
+    "Location": "OpenAI Headquarters, San Francisco",
+    "StartTime": "2024-08-10T14:00:00.000Z",
+    "EndTime": "2024-08-10T16:00:00.000Z",
+    "CategoryColor": "#28a745"
+  },
+  {
+    "Id": 21,
+    "Subject": "Ethical AI Roundtable Discussion",
+    "Location": "Virtual",
+    "StartTime": "2024-08-15T09:00:00.000Z",
+    "EndTime": "2024-08-15T11:00:00.000Z",
+    "CategoryColor": "#dc3545"
+  },
+  {
+    "Id": 22,
+    "Subject": "Tech Industry Expo",
+    "Location": "Las Vegas, NV",
+    "StartTime": "2024-08-20T08:00:00.000Z",
+    "EndTime": "2024-08-20T18:00:00.000Z",
+    "CategoryColor": "#6610f2"
+  },
+  {
+    "Id": 23,
+    "Subject": "AI Strategy Meeting",
+    "Location": "Virtual",
+    "StartTime": "2024-09-05T10:00:00.000Z",
+    "EndTime": "2024-09-05T12:00:00.000Z",
+    "CategoryColor": "#ffc107"
+  },
+  {
+    "Id": 24,
+    "Subject": "Annual Company Retreat",
+    "Location": "Maui, Hawaii",
+    "StartTime": "2024-09-10T14:00:00.000Z",
+    "EndTime": "2024-09-12T16:00:00.000Z",
+    "CategoryColor": "#20c997"
+  },
+  {
+    "Id": 25,
+    "Subject": "AI Ethics Conference",
+    "Location": "Virtual",
+    "StartTime": "2024-09-15T09:00:00.000Z",
+    "EndTime": "2024-09-15T11:00:00.000Z",
+    "CategoryColor": "#6f42c1"
+  }
+]
