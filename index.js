@@ -7,7 +7,7 @@ const helmet = require("helmet"); // Helmet helps you secure your Express apps b
 const eventRoutes = require("./routes/eventRoutes");
 
 require("dotenv").config(); // load environment variables from .env file
-const { PORT, HOST } = process.env || 3000;
+const { PORT } = process.env || 8080;
 // Middleware
 app.use(cors());
 app.use(express.json());
@@ -23,5 +23,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Example app listening at http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
