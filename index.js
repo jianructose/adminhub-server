@@ -16,6 +16,8 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use("/api/events", require("./routes/eventRoutes"));
+app.use("/api/kanban", require("./routes/kanbanRoutes"));
+
 app.get("/", (req, res) => {
   res.json({ message: "Hello World!" });
 });
