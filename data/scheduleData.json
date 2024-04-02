@@ -18,10 +18,9 @@
   {
     "Id": 3,
     "Subject": "AI Strategy Meeting",
-    "Location": "OpenAI Headquarters, San Francisco",
-    "StartTime": "2024-04-05T09:00:00.000Z",
-    "EndTime": "2024-04-05T11:00:00.000Z",
-    "CategoryColor": "#dc3545"
+    "StartTime": "2024-04-04T09:00:00.000Z",
+    "EndTime": "2024-04-06T07:00:00.000Z",
+    "Location": "OpenAI Headquarters, San Francisco"
   },
   {
     "Id": 4,
