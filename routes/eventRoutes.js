@@ -16,18 +16,7 @@ router.get("/", (req, res) => {
 // POST a new event
 router.post("/", (req, res) => {
   try {
-    const {
-      Id,
-      Subject,
-      StartTime,
-      EndTime,
-      Description,
-      IsAllDay,
-      Location,
-      RecurrenceRule,
-      StartTimezone,
-      EndTimezone,
-    } = req.body;
+    const { Id, Subject, Location, StartTime, EndTime } = req.body;
 
     if (Subject && StartTime && EndTime && typeof Id === "number") {
       const newEvent = {
@@ -35,12 +24,7 @@ router.post("/", (req, res) => {
         Subject: Subject,
         StartTime: StartTime,
         EndTime: EndTime,
-        Description: Description,
-        IsAllDay: IsAllDay || false,
         Location: Location,
-        RecurrenceRule: RecurrenceRule,
-        StartTimezone: StartTimezone,
-        EndTimezone: EndTimezone,
       };
 
       scheduleArray.push(newEvent);
@@ -65,12 +49,85 @@ router.post("/", (req, res) => {
 });
 
 // PUT (update) an event
-router.put("/:id", (req, res) => {
-  console.log("PUT request received", req.body);
-});
+router.put("/", (req, res) => {
+  try {
+    const { Id, Subject, Location, StartTime, EndTime } = req.body;
+    console.log(`request body id found when updating: ${Id}`);
 
+    if (Subject && StartTime && EndTime && typeof Id === "number") {
+      const eventIndex = scheduleArray.findIndex((event) => event.Id === Id);
+      // return the index of the event in the scheduleArray
+
+      if (eventIndex !== -1) {
+        scheduleArray[eventIndex] = {
+          Id: Id,
+          Subject: Subject,
+          StartTime: StartTime,
+          EndTime: EndTime,
+          Location: Location,
+        };
+
+        // write the updated scheduleArray to the file
+        fs.writeFileSync(
+          "./data/scheduleData.json",
+          JSON.stringify(scheduleArray, null, 2)
+        );
+
+        // send the updated scheduleArray back to the client
+        res.json(scheduleArray);
+      } else {
+        res.status(404).json({ message: "Oh no! Event not found." });
+      }
+    } else {
+      res.status(400).json({
+        message: "Invalid event data. Please provide required fields.",
+      });
+    }
+  } catch (error) {
+    console.log("error occured while updating event", error.message);
+    res.status(500).json({ error: "An unexpected error occurred" });
+  }
+});
+// event data in scheduleData.json
+//    {
+//   "Id": 34,
+//   "Subject": "edit-demo day!",
+//   "StartTime": "2024-04-04T07:00:00.000Z",
+//   "EndTime": "2024-04-05T07:00:00.000Z"
+// }
 // DELETE an event
-router.delete("/:id", (req, res) => {
-  console.log("DELETE request received", req.body.Id);
+router.delete("/", (req, res) => {
+  try {
+    const { Id } = req.body;
+    console.log(`request body found when deleting: ${Id}`);
+
+    if (Id) {
+      // find the event with the given Id
+      const eventIndex = scheduleArray.findIndex((event) => event.Id === Id);
+
+      if (eventIndex !== -1) {
+        // delete the event from the scheduleArray
+        scheduleArray.splice(eventIndex, 1);
+
+        // write the updated scheduleArray to the file
+        fs.writeFileSync(
+          "./data/scheduleData.json",
+          JSON.stringify(scheduleArray, null, 2)
+        );
+
+        // send the updated scheduleArray back to the client
+        res.json(scheduleArray);
+      } else {
+        res.status(404).json({ message: "Oh no! Event not found." });
+      }
+    } else {
+      res
+        .status(400)
+        .json({ message: "Invalid event Id. Please provide a number." });
+    }
+  } catch (error) {
+    console.log("error occured while deleting event", error.message);
+    res.status(500).json({ error: "An unexpected error occurred" });
+  }
 });
 module.exports = router;
