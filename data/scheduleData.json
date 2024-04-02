@@ -7,14 +7,7 @@
     "EndTime": "2024-04-05T11:00:00.000Z",
     "CategoryColor": "#dc3545"
   },
-  {
-    "Id": 4,
-    "Subject": "Product Launch Event",
-    "Location": "Virtual",
-    "StartTime": "2024-04-20T08:00:00.000Z",
-    "EndTime": "2024-04-20T18:00:00.000Z",
-    "CategoryColor": "#6610f2"
-  },
+  {},
   {
     "Id": 5,
     "Subject": "AI Ethics Roundtable Discussion",
@@ -238,5 +231,45 @@
     "StartTime": "2024-11-10T14:00:00.000Z",
     "EndTime": "2024-11-10T16:00:00.000Z",
     "CategoryColor": "#ffc107"
+  },
+  {
+    "Id": 1,
+    "Subject": "2328test",
+    "StartTime": "2024-04-03T07:00:00.000Z",
+    "EndTime": "2024-04-04T07:00:00.000Z",
+    "IsAllDay": true
+  },
+  {
+    "Id": 33,
+    "Subject": "2329test",
+    "StartTime": "2024-04-09T07:00:00.000Z",
+    "EndTime": "2024-04-10T07:00:00.000Z",
+    "IsAllDay": true
+  },
+  {
+    "Id": 34,
+    "Subject": "2330test",
+    "StartTime": "2024-04-16T16:00:00.000Z",
+    "EndTime": "2024-04-16T16:30:00.000Z",
+    "Description": "2330test\n",
+    "IsAllDay": false,
+    "Location": "2330test",
+    "RecurrenceRule": null,
+    "StartTimezone": null,
+    "EndTimezone": null
+  },
+  {
+    "Id": 35,
+    "Subject": "2337test",
+    "StartTime": "2024-04-04T07:00:00.000Z",
+    "EndTime": "2024-04-05T07:00:00.000Z",
+    "IsAllDay": true
+  },
+  {
+    "Id": 1,
+    "Subject": "eee",
+    "StartTime": "2024-04-03T07:00:00.000Z",
+    "EndTime": "2024-04-04T07:00:00.000Z",
+    "IsAllDay": true
   }
 ]

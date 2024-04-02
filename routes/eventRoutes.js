@@ -16,52 +16,61 @@ router.get("/", (req, res) => {
 // POST a new event
 router.post("/", (req, res) => {
   try {
-    console.log("req.body", req.body);
+    const {
+      Id,
+      Subject,
+      StartTime,
+      EndTime,
+      Description,
+      IsAllDay,
+      Location,
+      RecurrenceRule,
+      StartTimezone,
+      EndTimezone,
+    } = req.body;
 
-    const addedEvent = req.body.added[0];
+    if (Subject && StartTime && EndTime && typeof Id === "number") {
+      const newEvent = {
+        Id: Id,
+        Subject: Subject,
+        StartTime: StartTime,
+        EndTime: EndTime,
+        Description: Description,
+        IsAllDay: IsAllDay || false,
+        Location: Location,
+        RecurrenceRule: RecurrenceRule,
+        StartTimezone: StartTimezone,
+        EndTimezone: EndTimezone,
+      };
 
-    // validate this added event
-    if (!addedEvent) {
-      throw new Error("No event provided");
+      scheduleArray.push(newEvent);
+
+      // write the updated scheduleArray to the file
+      fs.writeFileSync(
+        "./data/scheduleData.json",
+        JSON.stringify(scheduleArray, null, 2)
+      );
+
+      // send the updated scheduleArray back to the client
+      res.status(201).json(scheduleArray);
+    } else {
+      res.status(400).json({
+        message: "Invalid event data. Please provide required fields.",
+      });
     }
-
-    // add the event to the scheduleArray
-    scheduleArray.unshift(addedEvent);
-
-    // write the updated scheduleArray to the file
-    fs.writeFileSync(
-      "./data/scheduleData.json",
-      JSON.stringify(scheduleArray, null, 2)
-    );
-
-    // send the updated scheduleArray back to the client
-    res.status(201).json(scheduleArray);
   } catch (error) {
     console.log("error occured while adding event", error.message);
-    res.status(400).json({ message: error.message });
+    res.status(500).json({ error: "An unexpected error occurred" });
   }
 });
 
 // PUT (update) an event
 router.put("/:id", (req, res) => {
-  const { id } = req.params;
-  const updatedEvent = req.body;
-  scheduleArray[id] = updatedEvent;
-  fs.writeFileSync(
-    "./data/scheduleData.json",
-    JSON.stringify(scheduleArray, null, 2)
-  );
-  res.json(scheduleArray);
+  console.log("PUT request received", req.body);
 });
 
 // DELETE an event
 router.delete("/:id", (req, res) => {
-  const { id } = req.params;
-  scheduleArray.splice(id, 1);
-  fs.writeFileSync(
-    "./data/scheduleData.json",
-    JSON.stringify(scheduleArray, null, 2)
-  );
-  res.json(scheduleArray);
+  console.log("DELETE request received", req.body.Id);
 });
 module.exports = router;
